@@ -18,6 +18,7 @@ html {
 
 body {
   background-color: #eee;
+  text-decoration: none;
 }
 
 .container {
@@ -77,4 +78,128 @@ body {
 .container .products-container .product .price {
   font-size: 2rem;
   color: #022b3a;
+}
+
+.products-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-preview .preview {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin: 2rem;
+  width: 40rem;
+}
+
+.products-preview .preview.active {
+  display: inline-block;
+}
+
+.products-preview .preview img {
+  height: 30rem;
+}
+
+.products-preview .preview .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  color: #022b3a;
+  cursor: pointer;
+}
+
+.products-preview .preview .fa-times:hover {
+  color: #1f7a8c;
+  transform: rotate(90deg);
+}
+
+.products-preview .preview .fa-times:active {
+  transform: rotate(180deg);
+}
+
+.products-preview .preview h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  color: #022b3a;
+}
+
+.products-preview .preview .stars {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+.products-preview .preview .stars i {
+  color: #1f7a8c;
+}
+.products-preview .preview .stars span {
+  color: #2b96ac;
+}
+
+.products-preview .preview p {
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: #0c3442;
+}
+
+.products-preview .preview .price {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #1f7a8c;
+}
+
+.products-preview .preview .buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #0c3442;
+  border: 0.1rem solid #0c3442;
+  text-decoration: none;
+}
+
+.products-preview .preview .buttons a.cart {
+  background: #185166;
+  color: #fff;
+}
+.products-preview .preview .buttons a.cart:hover {
+  background: #022b3a;
+}
+.products-preview .preview .buttons a.buy:hover {
+  background: #185166;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .products-preview .preview img {
+    width: 25rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
